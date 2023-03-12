@@ -1,0 +1,182 @@
+.mapContainer {
+  height: 100vh;
+  padding-top: 45px;
+
+
+  :global {
+    #allmap {
+      height: 100%;
+      width: 100%;
+    }
+    .hide{
+      display: none !important;
+    }
+    .show{
+      
+      display: flex !important;
+    }
+    .hoseList {
+      width: 100%;
+      height: 300px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 99999;
+
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .listTop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+
+        background-color: #bfbfbf;
+
+        .listTitle {
+          font-size: 24px;
+          margin-left: 15px;
+          font-weight: 700;
+        }
+
+        .listMore {
+          margin-right: 15px;
+        }
+      }
+
+      .listBottom {
+        height: auto;
+        overflow: auto;
+        z-index: 99999;
+
+        .listItem {
+          display: flex;
+          align-items: center;
+          margin: 5px 10px;
+          height: 100px;
+          position: relative;
+
+          :not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 345px; // 边框的宽度
+            height: 1px;
+            left: 50%; //距离 view 标签的距离
+            bottom: -5px;
+            background-color: skyblue; //  颜色
+            transform: translateX(-50%);
+            z-index: 666;
+          }
+
+          .itemLeft {
+            width: 110px;
+            height: 90px;
+            border-radius: 3px;
+            overflow: hidden;
+
+            img {
+              width: 110px;
+              height: 90px;
+              border-radius: 3px;
+
+            }
+          }
+
+          .itemRight {
+            width: 240px;
+            margin-left: 10px;
+            height: 90px;
+
+            h3 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            span {
+              font-size: 12px;
+              color: #bfb5b6;
+            }
+
+            .tagsBox {
+              display: flex;
+
+              .tags {
+                width: auto;
+                margin-right: 4px;
+                background-color: lightgoldenrodyellow;
+                padding: 0 4px;
+                border-radius: 2px;
+              }
+            }
+
+            .price {
+              font-size: 15px;
+
+              span {
+                font-size: 18px;
+                padding-right: 5px;
+                color: red;
+
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+  }
+}
+
+
+.bubbleCircle {
+  width: 70px;
+  height: 70px;
+  line-height: 1;
+  display: inline-block;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(12, 181, 106, 0.9);
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mapHousTitle {
+  padding: 18px 0 6px 0;
+}
+
+.mapRectTitle {
+  padding: 5px 0 6px 0;
+}
+
+
+
+.bubbleRect {
+  // width: 80px;
+  width: auto;
+  padding: 5px;
+  align-items: center;
+  height: 40px;
+  line-height: 1;
+  position: absolute;
+  border-radius: 5px;
+  display: flex;
+  background-color: rgba(12, 181, 106, 0.9);
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  cursor: pointer;
+}

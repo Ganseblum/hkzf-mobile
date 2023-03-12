@@ -1,0 +1,370 @@
+.root {
+  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  :global {
+    .mark {
+     position: fixed;
+      height: 100vh;
+      z-index: 1000;
+      margin-top: -45px;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: .2);
+    }
+
+    .box{
+      margin-top: -45px;
+      width: 100%;
+      height: 45px;
+      background-color: #21b97a;
+      display: flex;
+      color: white;
+      align-items: center;
+      position: absolute;
+      z-index: 999;
+
+      .left{
+        flex: 1;
+        text-align: center;
+
+        .iconStyle{
+          font-size: 24px;
+        }
+   
+      }
+      .center{
+        flex: 5;
+        text-align: center;
+        .searchBox {
+          position: absolute;
+          top: 10%;
+          left: 50%;
+          transform: translate(-50%, -5%);
+          z-index: 999;
+          display: flex;
+          align-items: center;
+    
+          .searchLeft {
+            width: 260px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 2px;
+            overflow: hidden;
+    
+            .leftIcon {
+              font-size: 13px;
+              margin: 0 5px;
+              color: #bfb5b6;
+            }
+    
+            .leftFirst {
+              .city {
+                width: 20px;
+                color: black;
+                margin-left: 5px;
+              }
+            }
+    
+            .leftSecond {
+              display: flex;
+              align-items: center;
+    
+              span {
+                color: #bfb5b6;
+              }
+    
+              .ipt {
+                border: none;
+                width: 165px;
+    
+                &:focus {
+                  outline: none
+                }
+              }
+    
+            }
+    
+          }
+    
+          .searchRight {
+            width: 32px;
+            height: 32px;
+            border: 2px solid whitesmoke;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+    
+            .iconSize {
+              font-size: 22px;
+              color: whitesmoke !important;
+    
+            }
+    
+          }
+        }
+      }
+      .right{
+        text-align: center;
+        flex: 1;
+        font-size: 24px;
+      }
+    }
+
+
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+
+
+
+      .filterTitleBox {
+        position: relative;
+        width: 100vw;
+        z-index: 10001;
+        display: flex;
+        height: 50px;
+        background-color: white;
+        align-items: center;
+
+        .acticeItem {
+          color: rgb(176, 176, 145) !important;
+        }
+
+        .item {
+          text-align: center;
+          flex: 1;
+          font-size: 18px;
+
+          .iconStyle {
+            color: #bfb5b6;
+            padding-left: 5px;
+          }
+        }
+      }
+
+      .filterPickerBox {
+        width: 100vw;
+        border-top: 1px solid #bfb5b6;
+        z-index: 10001;
+        background-color: white;
+        position: relative;
+
+        .btnBox {
+          display: flex;
+          height: 40px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          align-items: center;
+          font-size: 20px;
+          border-top: 1px solid #bfb5b6;
+
+          .cancle {
+            width: 30vw;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: lightgreen;
+
+          }
+
+          .sure {
+            width: 70vw;
+            height: 40px;
+            text-align: center;
+            color: white;
+            line-height: 40px;
+            background-color: lightgreen;
+          }
+        }
+      }
+
+
+
+
+
+
+    }
+
+    .filterMoreBox {
+      width: 200px;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      position: fixed;
+      background-color: white;
+      z-index: 1000000;
+
+      .filterMore {
+        height: 100vh;
+        overflow: auto;
+        position: relative;
+        padding-bottom: 50px;
+
+        .item {
+          margin-top: 15px;
+          height: auto;
+          border-bottom: 1px solid #bfb5b6;
+
+          .itemTitle {
+            font-size: 24px;
+            text-align: center;
+          }
+
+          .itemInfoBox {
+            display: flex;
+
+            align-items: center;
+            flex-direction: column;
+
+            .itemInfo {
+              font-size: 16px;
+              margin: 15px 0;
+              padding: 8px;
+              border-radius: 5px;
+              color: #bfb5b6;
+              border: #bfb5b6 1px solid;
+            }
+
+            .activeItem {
+              color: lightgreen !important;
+              border: lightgreen 1px solid !important;
+            }
+          }
+
+        }
+
+
+        .btn {
+
+          position: fixed;
+          display: flex;
+          bottom: 0px;
+          right: 0px;
+          align-items: center;
+          text-align: center;
+          line-height: 50px;
+          font-size: 16px;
+          color: white;
+
+          .cancle {
+            width: 80px;
+            height: 50px;
+            background-color: rgb(224, 247, 244);
+            color: rgb(3, 3, 0);
+          }
+
+          .sure {
+            width: 120px;
+            height: 50px;
+            background-color: lightgreen;
+          }
+        }
+
+      }
+
+    }
+
+    .markSelect {
+      position: fixed;
+      height: 100vh;
+      z-index: 99980;
+      margin-top: -45px;
+      width: 100%;
+      background-color: rgba($color: #000000, $alpha: .2);
+    }
+
+
+
+
+    .houseLsit {
+      padding-bottom: 80px;
+      .listBottom {
+        height: auto;
+        z-index: 99999;
+        .listItem {
+          display: flex;
+          align-items: center;
+          margin: 5px 10px;
+          height: 100px;
+          position: relative;
+
+          :not(:last-child)::after {
+            content: '';
+            position: absolute;
+            width: 345px; // 边框的宽度
+            height: 1px;
+            left: 50%; //距离 view 标签的距离
+            bottom: -5px;
+            background-color: skyblue; //  颜色
+            transform: translateX(-50%);
+            z-index: 666;
+          }
+
+          .itemLeft {
+            width: 110px;
+            height: 90px;
+            border-radius: 3px;
+            overflow: hidden;
+
+            img {
+              width: 110px;
+              height: 90px;
+              border-radius: 3px;
+
+            }
+          }
+
+          .itemRight {
+            width: 240px;
+            margin-left: 10px;
+            height: 90px;
+
+            h3 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            span {
+              font-size: 12px;
+              color: #bfb5b6;
+            }
+
+            .tagsBox {
+              display: flex;
+
+              .tags {
+                width: auto;
+                margin-right: 1px;
+                background-color: lightgoldenrodyellow;
+                padding: 0 1px;
+                border-radius: 2px;
+              }
+            }
+
+            .price {
+              font-size: 15px;
+
+              span {
+                font-size: 18px;
+                padding-right: 5px;
+                color: red;
+
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+
+  }
+}

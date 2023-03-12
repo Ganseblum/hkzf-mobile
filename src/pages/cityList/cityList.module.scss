@@ -1,0 +1,43 @@
+.root{
+  height: 100vh;
+  padding-top: 45px;
+  :global{
+    .listItem{
+        display: flex;
+        flex-direction: column;
+        .cityIndex{
+          
+          font-size: 20px;
+          color: #bfb5b6;
+
+        }
+        .cityName{
+          height:45px;
+          line-height:45px;
+          border-bottom: 1px solid #bfb5b6;
+        }
+      }
+      .cityUl{
+        position: fixed;
+        right: 20px;
+        top: 45px;
+        .activeItem{
+          background-color: #21b97a;
+          color: white;
+        }
+        li{
+          height: 22px;
+          width: 22px;
+          line-height: 22px;
+          border-radius: 50%;
+          margin-top: 7px;
+          text-align: center;
+          
+        }
+      }
+
+
+
+
+  }
+}
